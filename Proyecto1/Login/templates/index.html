@@ -1,0 +1,73 @@
+<! doctype html />
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Login </title>
+    {% load bootstrap4 %}
+
+    {% bootstrap_css %}
+
+
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="mx-auto border border-primary" style="width:200px">
+        <br>
+        <div class="container">
+            <a href="{% url 'Login:landing'%}"></a>
+            <form method="POST" >
+                <!--Inicio cifrado-->
+                {% csrf_token %}
+                <!--fin cifrado-->
+
+
+                <!--Inicio imagen-->
+                <div class="form-group" style="text-align: center">
+                    <img class="rounded-circle border border-white" style="width: 100px"
+                    src="https://yt3.ggpht.com/-YwMpHcK-stA/AAAAAAAAAAI/AAAAAAAAAAA/oM7Sx_zO8S8/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
+                </div>
+                <!--fin imagen-->
+
+                <div class="form-group">
+                    <input type="text" class="form-control border border-blue" id="example2"
+                    aria-describedby="emailHelp" placeholder="email" name="user" required>
+                </div>
+                <br>
+                <div class="form-group">
+                        <input type="password" class="form-control border border-blue" id="example1"
+                        placeholder="password" name="password" required>
+    
+                </div>
+                <div style="text-align: center">
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                    <br>
+                    {% if error %}
+                    <br>
+                    <div class="alert alert-warning" role="alert">
+                        {{error}}
+                    </div>
+                    {% endif %}
+                    <a href = "{% url 'Login:landing'%}">Ir a Landing</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    {# JS y jQuery Bootstrap #}
+    {% bootstrap_javascript jquery='full' %}
+</body>
+
+<footer>
+
+</footer>
+
+</html>
