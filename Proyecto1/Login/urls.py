@@ -17,10 +17,15 @@ from Dashboard.views import DashboardClass
 app_name = 'Login'
 
 urlpatterns = [
-    path ('',LandingClass.as_view(),name='landing'),
-    path ('login',LoginClass.as_view(),name='login'),
-    path ('landing',LandingClass.as_view(),name='landing'),
-    path ('dashboard',DashboardClass.as_view(),name='dashboard'),
+
+    path('',LoginClass.as_view(), name = 'login'),
+    # path('Dashboard',DashboardClass.as_view(), name = 'Dashboard')
+    
+    # path ('',LandingClass.as_view(),name='landing'),
+    # path ('login',LoginClass.as_view(),name='login'),
+    # path ('landing',LandingClass.as_view(),name='landing'),
+    # path ('dashboard',DashboardClass.as_view(),name='dashboard'),
+
     #path('', views.Landing,name='Landing'),
     #path('', LoginClass.as_view(), name='Login'),
     #path('login/', views.Index,name='Index'),

@@ -22,7 +22,7 @@
     <div class="mx-auto border border-primary" style="width:200px">
         <br>
         <div class="container">
-            <a href="{% url 'Login:landing'%}"></a>
+            <a href="{% url 'Landing:landing'%}"></a>
             <form method="POST" >
                 <!--Inicio cifrado-->
                 {% csrf_token %}
@@ -55,7 +55,7 @@
                         {{error}}
                     </div>
                     {% endif %}
-                    <a href = "{% url 'Login:landing'%}">Ir a Landing</a>
+                    <a href = "{% url 'Landing:landing'%}">Ir a Landing</a>
                 </div>
             </form>
         </div>

@@ -18,6 +18,11 @@ from django.urls import include, path, re_path
 #from django.conf import settings
 
 urlpatterns = [
-    path('',include('Login.urls')),
     path('admin/', admin.site.urls),
+    path('', include ('Landing.urls')),
+    path('login/', include ('Login.urls')),
+    path('dashboard/', include ('Dashboard.urls')),
+
+    #path('',include('Login.urls')),
+    #path('admin/', admin.site.urls),
 ]
